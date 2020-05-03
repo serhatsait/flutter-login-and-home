@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:serhatsaitpekediz/about.dart';
-import 'package:serhatsaitpekediz/detail/age.dart';
+import 'package:serhatsaitpekediz/detail/calculator.dart';
 import 'package:serhatsaitpekediz/detail/flutter-vs-rn.dart';
 import 'package:serhatsaitpekediz/detail/github.dart';
 
@@ -28,6 +28,23 @@ class HomeState extends State<Home> {
     var _yOffset = 0.0;
     var _blurRadius = 0.0;
     var _spreadRadius = 0.0;
+
+    final commonDecoration = BoxDecoration(
+      gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Color(0xff2d9a59), Color(0xff4e8a29)]),
+      boxShadow: [
+        BoxShadow(
+          color: Color.fromRGBO(0, 0, 0, _opacity),
+          offset: Offset(_xOffset, _yOffset),
+          blurRadius: _blurRadius,
+          spreadRadius: _spreadRadius,
+        )
+      ],
+      borderRadius: BorderRadius.circular(10),
+      color: Colors.white,
+    );
 
     return Scaffold(
       appBar: new AppBar(
@@ -162,25 +179,7 @@ class HomeState extends State<Home> {
                                 width: screenSize.width /
                                     (2 /
                                         (screenSize.height / screenSize.width)),
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                      begin: Alignment.topCenter,
-                                      end: Alignment.bottomCenter,
-                                      colors: [
-                                        Color(0xff2d9a59),
-                                        Color(0xff4e8a29)
-                                      ]),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Color.fromRGBO(0, 0, 0, _opacity),
-                                      offset: Offset(_xOffset, _yOffset),
-                                      blurRadius: _blurRadius,
-                                      spreadRadius: _spreadRadius,
-                                    )
-                                  ],
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Colors.white,
-                                ),
+                                decoration: commonDecoration,
                                 child: Row(
                                   children: <Widget>[
                                     Container(
@@ -242,25 +241,7 @@ class HomeState extends State<Home> {
                                 width: screenSize.width /
                                     (2 /
                                         (screenSize.height / screenSize.width)),
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                      begin: Alignment.topCenter,
-                                      end: Alignment.bottomCenter,
-                                      colors: [
-                                        Color(0xff2d9a59),
-                                        Color(0xff4e8a29)
-                                      ]),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Color.fromRGBO(0, 0, 0, _opacity),
-                                      offset: Offset(_xOffset, _yOffset),
-                                      blurRadius: _blurRadius,
-                                      spreadRadius: _spreadRadius,
-                                    )
-                                  ],
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Colors.white,
-                                ),
+                                decoration:commonDecoration,
                                 child: Row(
                                   children: <Widget>[
                                     Container(
@@ -301,7 +282,7 @@ class HomeState extends State<Home> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Age(),
+                                builder: (context) => Calc(),
                               ),
                             );
                           },

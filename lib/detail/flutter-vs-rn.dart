@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Detail1 extends StatefulWidget {
   @override
@@ -9,6 +10,17 @@ class Detail1 extends StatefulWidget {
 class Detail1State extends State<Detail1> {
   @override
   Widget build(BuildContext context) {
+
+    final styleGoogle = GoogleFonts.nunito(
+      textStyle: TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+          letterSpacing: 1,
+          fontStyle: FontStyle.italic,
+          height: 1.5),
+    );
+
+
     return Scaffold(
       appBar: new AppBar(
         flexibleSpace: Container(
@@ -72,14 +84,7 @@ class Detail1State extends State<Detail1> {
                           'Kotlin/Java. However, this requires engineers to learn two completely different sets of technologies. '
                           'As a result, companies have started to adopt cross-platform solutions over the native solutions to '
                           'build apps for both iOS and Android faster using a single language.',
-                          style: TextStyle(
-                              fontFamily: 'CorporateACyr-Regular',
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: 1,
-                              fontStyle: FontStyle.italic,
-                              height: 1.5),
-                        ),
+                          style: styleGoogle),
                       ),
                       SizedBox(
                         height: 10,
@@ -111,14 +116,7 @@ class Detail1State extends State<Detail1> {
                           'Installation Setup and project configuration UI components and development API Developer productivity '
                           'Community support Testing support Build & release automation support DevOps and CI/CD support Now that '
                           'we have defined all our criteria, let’s start exploring each of them in detail.',
-                          style: TextStyle(
-                              fontFamily: 'CorporateACyr-Regular',
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: 1,
-                              fontStyle: FontStyle.italic,
-                              height: 1.5,
-                              color: Colors.black),
+                          style: styleGoogle
                         ),
                       ),
                       SizedBox(

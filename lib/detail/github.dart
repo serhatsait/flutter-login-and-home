@@ -10,14 +10,13 @@ class Github extends StatefulWidget {
 class GithubState extends State<Github> {
   @override
   Widget build(BuildContext context) {
-
-    final styleGoogle =  GoogleFonts.nunito(
-    textStyle: TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-    letterSpacing: 1,
-    fontStyle: FontStyle.italic,
-    height: 1.5),
+    final styleGoogle = GoogleFonts.nunito(
+      textStyle: TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+          letterSpacing: 1,
+          fontStyle: FontStyle.italic,
+          height: 1.5),
     );
 
     return Scaffold(
@@ -73,31 +72,50 @@ class GithubState extends State<Github> {
                       ),
                       Center(
                         child: Text(
-                          'GitHub CEO\'su Nat Friedman, yayınladığı bir blog yazısıyla '
-                          'artık takımlar için de GitHub\'ın ücretsiz olduğunu duyurdu.',
-                          style: styleGoogle
-                        ),
+                            'GitHub CEO\'su Nat Friedman, yayınladığı bir blog yazısıyla '
+                            'artık takımlar için de GitHub\'ın ücretsiz olduğunu duyurdu.',
+                            style: styleGoogle),
                       ),
                       SizedBox(
                         height: 10,
                       ),
                       Center(
                         child: Text(
-                          '2018 yılında Microsoft tarafından satın alınan dünyanın en popüler '
-                          'kod deposu GitHub\'ın geçtiğimiz ay iOS ve Android platformları için '
-                          'uygulamalarını yayınladığını sizlerle paylaşmıştık.',
-                          style: styleGoogle
-                        ),
+                            '2018 yılında Microsoft tarafından satın alınan dünyanın en popüler '
+                            'kod deposu GitHub\'ın geçtiğimiz ay iOS ve Android platformları için '
+                            'uygulamalarını yayınladığını sizlerle paylaşmıştık.',
+                            style: styleGoogle),
                       ),
                       SizedBox(
                         height: 10,
                       ),
                       Center(
                         child: Text(
-                          'Bugün GitHub CEO\'su Nat Friedman, yayınladığı bir blog yazısıyla '
-                          'artık takımlar için de GitHub\'ın ücretsiz olduğunu duyurdu.',
-                          style: styleGoogle
-                        ),
+                            'Bugün GitHub CEO\'su Nat Friedman, yayınladığı bir blog yazısıyla '
+                            'artık takımlar için de GitHub\'ın ücretsiz olduğunu duyurdu.',
+                            style: styleGoogle),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Center(
+                        child: Text(
+                            'Yazılım geliştiren takımlar daha öncesinde GitHub kullanmak '
+                            'istediğinde ücretli paketlerden birine abone olmak zorundaydı. '
+                            'Bu durum da yazılım geliştiren ekiplerin GitHub alternatiflerine '
+                            'yönelmesine sebep oluyordu.Friedman, blog yazısında ücretin yazılım '
+                            'geliştiren takımların GitHub kullanması için bariyer olmaması gerektiğini belirtmiş.',
+                            style: styleGoogle),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Center(
+                        child: Text(
+                            'Bu gelişmeyle beraber yazılım geliştiren takımlar da '
+                            'artık ücretsiz bir şekilde CI/CD, proje yönetimi, '
+                            'kod inceleme gibi özellikleri ücretsiz kullanabilecek.',
+                            style: styleGoogle),
                       ),
                       SizedBox(
                         height: 50,
