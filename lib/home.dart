@@ -5,7 +5,10 @@ import 'package:serhatsaitpekediz/about.dart';
 import 'package:serhatsaitpekediz/detail/calculator.dart';
 import 'package:serhatsaitpekediz/detail/flutter-vs-rn.dart';
 import 'package:serhatsaitpekediz/detail/github.dart';
+import 'package:serhatsaitpekediz/login/welcomePage.dart';
 
+//TODO: bazı sayfalarda da kullanılan aynı kodların açıklamalarını her sayfaya eklemedim hocam. Bilginiz olsun :)
+//TODO: Ana sayfamızın kodları burada bulunmaktadır
 class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => HomeState();
@@ -14,6 +17,9 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    //TODO: styleGoogle adında bir değişkene yazı stilleri atanarak bir çok yerde kullanılan stilleri buradan kontrol edip
+    //TODO: tek bir yerden değiştirip hepsinde değişmesini sağlıyoruz
+    //TODO: böylelikle kod kısalığını da sağlamış oluyoruz
     final styleGoogle = GoogleFonts.nunito(
       textStyle: TextStyle(
           fontSize: 14,
@@ -22,7 +28,10 @@ class HomeState extends State<Home> {
           fontStyle: FontStyle.italic,
           height: 1.5),
     );
+    //TODO: ekran boyutunu alıp bir değişkene atıyoruz burada
     final screenSize = MediaQuery.of(context).size;
+
+    //TODO: kullandığımız widgetların özelliklerini ve dekorasyonlarını bir değişkene atayıp kod tekrarından kaçınıyoruz burada
     var _opacity = 1.0;
     var _xOffset = 0.0;
     var _yOffset = 0.0;
@@ -47,29 +56,22 @@ class HomeState extends State<Home> {
     );
 
     return Scaffold(
+      //TODO: Burada appbar oluşturarak ilgili sayfanın başlığını ekliyoruz
       appBar: new AppBar(
-        elevation: 0.1,
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color(0xff2d9a59), Color(0xff4e8a29)])),
-        ),
-        title: Text('Serhat Sait'),
-        actions: <Widget>[
-          new IconButton(
-              icon: Icon(
-                Icons.search,
-                color: Colors.white,
-              ),
-              onPressed: () {}),
-        ],
-      ),
+          elevation: 0.1,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [Color(0xff2d9a59), Color(0xff4e8a29)])),
+          ),
+          title: Text('BLOGCU')),
+      //TODO: Burada drawer menu(Türkçesi çekmece menü) oluşturarak diğer sayfalara erişimi ve profil bilgilerini ekliyoruz
       drawer: new Drawer(
         child: new ListView(
           children: <Widget>[
-            //header
+            //TODO: Drawer menü üst kısmı
             new UserAccountsDrawerHeader(
               accountName: Text('Serhat Sait Pekediz'),
               accountEmail: Text('serhatsaitpekediz@gmail.com'),
@@ -90,27 +92,20 @@ class HomeState extends State<Home> {
                       colors: [Color(0xff2d9a59), Color(0xff4e8a29)])),
             ),
 
-            //body
+            //TODO: drawer menu içerik kısmı başlangıcı
 
             InkWell(
+              //TODO:Giriş yap sayfasına bağlantı veriyoruz
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Home(),
+                    builder: (context) => WelcomePage(),
                   ),
                 );
               },
               child: ListTile(
-                title: Text('Home Page'),
-                leading: Icon(Icons.home),
-              ),
-            ),
-
-            InkWell(
-              onTap: () {},
-              child: ListTile(
-                title: Text('My Account'),
+                title: Text('Giriş Yap'),
                 leading: Icon(Icons.person),
               ),
             ),
@@ -118,17 +113,7 @@ class HomeState extends State<Home> {
             Divider(),
 
             InkWell(
-              onTap: () {},
-              child: ListTile(
-                title: Text('Settings'),
-                leading: Icon(
-                  Icons.settings,
-                  color: Colors.blue,
-                ),
-              ),
-            ),
-
-            InkWell(
+              //TODO: Hakkımızda sayfasına bağlantı veriyoruz
               onTap: () {
                 Navigator.push(
                   context,
@@ -148,6 +133,7 @@ class HomeState extends State<Home> {
           ],
         ),
       ),
+      //TODO: Burada anasayfanın içeriğini eklemeye başlıyoruz
       body: SafeArea(
         child: Builder(
           builder: (context) => GestureDetector(
@@ -162,8 +148,11 @@ class HomeState extends State<Home> {
                     constraints: BoxConstraints(maxWidth: 700),
                     child: Column(
                       children: <Widget>[
+                        //TODO: 50px lik bir boşluk bırakıyoruz
                         const SizedBox(height: 50),
+                        //TODO: ana ekranda ki 1. elementimiz
                         GestureDetector(
+                          //TODO: Elementin iç sayfasına bağlantı ekliyoruz
                           onTap: () {
                             Navigator.push(
                               context,
@@ -176,6 +165,7 @@ class HomeState extends State<Home> {
                             children: <Widget>[
                               Container(
                                 padding: EdgeInsets.all(10),
+                                //TODO: Elementin kaplayacağı genişliği hesaplıyoruz
                                 width: screenSize.width /
                                     (2 /
                                         (screenSize.height / screenSize.width)),
@@ -183,6 +173,7 @@ class HomeState extends State<Home> {
                                 child: Row(
                                   children: <Widget>[
                                     Container(
+                                      //TODO: Elementin içerisinde resim ekleme bölümü
                                         width: 75.0,
                                         height: 75.0,
                                         decoration: new BoxDecoration(
@@ -195,6 +186,7 @@ class HomeState extends State<Home> {
                                       padding: EdgeInsets.only(left: 30),
                                       child: Column(
                                         children: <Widget>[
+                                          //TODO: Elementin içerinde başlık ekleme bölümü
                                           RichText(
                                             text: TextSpan(
                                                 text:
@@ -224,8 +216,10 @@ class HomeState extends State<Home> {
                             ],
                           ),
                         ),
+                        //TODO: 50px lik bir boşluk bırakıyoruz
                         const SizedBox(height: 50),
                         GestureDetector(
+                          //TODO: Elementin iç sayfasına bağlantı ekliyoruz
                           onTap: () {
                             Navigator.push(
                               context,
@@ -238,13 +232,15 @@ class HomeState extends State<Home> {
                             children: <Widget>[
                               Container(
                                 padding: EdgeInsets.all(10),
+                                //TODO: Elementin kaplayacağı genişliği hesaplıyoruz
                                 width: screenSize.width /
                                     (2 /
                                         (screenSize.height / screenSize.width)),
-                                decoration:commonDecoration,
+                                decoration: commonDecoration,
                                 child: Row(
                                   children: <Widget>[
                                     Container(
+                                      //TODO: Elementin içerisinde resim ekleme bölümü
                                         width: 75.0,
                                         height: 75.0,
                                         decoration: new BoxDecoration(
@@ -258,6 +254,7 @@ class HomeState extends State<Home> {
                                       child: Column(
                                         children: <Widget>[
                                           RichText(
+                                            //TODO: Elementin içerinde başlık ekleme bölümü
                                             text: TextSpan(
                                                 text: 'GitHub artık takımlar',
                                                 style: styleGoogle),
@@ -276,8 +273,10 @@ class HomeState extends State<Home> {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 100),
+                        //TODO: 50px lik bir boşluk bırakıyoruz
+                        const SizedBox(height: 50),
                         GestureDetector(
+                          //TODO: Elementin iç sayfasına bağlantı ekliyoruz
                           onTap: () {
                             Navigator.push(
                               context,
@@ -286,11 +285,45 @@ class HomeState extends State<Home> {
                               ),
                             );
                           },
-                          child: Text('lorem'),
-                        ),
-                        const SizedBox(height: 100),
-                        Container(
-                          child: Text('lorem'),
+                          child: Row(
+                            children: <Widget>[
+                              Container(
+                                padding: EdgeInsets.all(10),
+                                //TODO: Elementin kaplayacağı genişliği hesaplıyoruz
+                                width: screenSize.width /
+                                    (2 /
+                                        (screenSize.height / screenSize.width)),
+                                decoration: commonDecoration,
+                                child: Row(
+                                  children: <Widget>[
+                                    Container(
+                                      //TODO: Elementin içerisinde resim ekleme bölümü
+                                        width: 75.0,
+                                        height: 75.0,
+                                        decoration: new BoxDecoration(
+                                            shape: BoxShape.rectangle,
+                                            image: new DecorationImage(
+                                                fit: BoxFit.contain,
+                                                image: AssetImage(
+                                                    'assets/images/age-png-5.png')))),
+                                    Container(
+                                      padding: EdgeInsets.only(left: 30),
+                                      child: Column(
+                                        children: <Widget>[
+                                          RichText(
+                                            //TODO: Elementin içerinde başlık ekleme bölümü
+                                            text: TextSpan(
+                                                text: 'Yaş Hesabı',
+                                                style: styleGoogle),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),

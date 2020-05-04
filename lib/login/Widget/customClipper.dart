@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
+
+//TODO: bezier eğrisi oluştururken kullanılan kaynak kodlar buradadır
 class ClipPainter extends CustomClipper<Path>{
   @override
  

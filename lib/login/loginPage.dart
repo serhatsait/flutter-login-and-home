@@ -4,6 +4,9 @@ import 'package:serhatsaitpekediz/login/signup.dart';
 
 import 'Widget/bezierContainer.dart';
 
+//TODO: bazı sayfalarda da kullanılan aynı kodların açıklamalarını her sayfaya eklemedim hocam. Bilginiz olsun :)
+//TODO: Giriş Yap sayfasının kodları burada bulunuyor
+
 class LoginPage extends StatefulWidget {
   LoginPage({Key key, this.title}) : super(key: key);
 
@@ -14,6 +17,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  //TODO: Geri butonunun ayarlandığı kısım
   Widget _backButton() {
     return InkWell(
       onTap: () {
@@ -36,6 +40,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _entryField(String title, {bool isPassword = false}) {
+    //TODO: Eposta ve Şifre yazılarının özelliklerinin ayarlandığı kısım
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
       child: Column(
@@ -60,6 +65,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _submitButton() {
+    //TODO: Giriş yap butonunun özelliklerinin ayarlandığı kısım
     return Container(
       width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.symmetric(vertical: 15),
@@ -85,6 +91,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _divider() {
+    //TODO: Giriş yap butonu ile Facebook ile giriş yap butonunun arasında ki alanın ayarlandığı kısım
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
       child: Row(
@@ -118,6 +125,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _facebookButton() {
+    //TODO: Facebook ile giriş yap butonunun ayarlarının yapıkldığı kısım
     return Container(
       height: 50,
       margin: EdgeInsets.symmetric(vertical: 20),
@@ -166,6 +174,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _createAccountLabel() {
+    //TODO: Henüz bir hesabın yok mu alanının ayarlandığı kısım
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20),
       alignment: Alignment.bottomCenter,
@@ -198,10 +207,11 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _title() {
+    //TODO: Uygulama başlığının düzenlendiği kısım
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-          text: 's',
+          text: 'B',
           style: GoogleFonts.portLligatSans(
             textStyle: Theme.of(context).textTheme.display1,
             fontSize: 30,
@@ -209,11 +219,11 @@ class _LoginPageState extends State<LoginPage> {
           ),
           children: [
             TextSpan(
-              text: 'er',
+              text: 'LOG',
               style: TextStyle(color: Colors.black, fontSize: 30),
             ),
             TextSpan(
-              text: 'hat',
+              text: 'CU',
               style: TextStyle(color: Color(0xff2d9a59), fontSize: 30),
             ),
           ]),
@@ -221,6 +231,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _emailPasswordWidget() {
+    //TODO: İlgili fieldların başlıklarını düzenleme kısmı
     return Column(
       children: <Widget>[
         _entryField("Eposta"),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'customClipper.dart';
 
+//TODO: Giriş yap sayfasında sağ üstte bulunan bezier eğrisinin kodları bu sayfada bulunmaktadır.
 class BezierContainer extends StatelessWidget {
   const BezierContainer({Key key}) : super(key: key);
 

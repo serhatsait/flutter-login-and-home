@@ -4,6 +4,10 @@ import 'package:serhatsaitpekediz/home.dart';
 import 'package:serhatsaitpekediz/login/loginPage.dart';
 import 'package:serhatsaitpekediz/login/signup.dart';
 
+//TODO: bazı sayfalarda da kullanılan aynı kodların açıklamalarını her sayfaya eklemedim hocam. Bilginiz olsun :)
+//TODO: Giriş Yap ana ekran sayfasının kodları burada bulunuyor
+
+
 class WelcomePage extends StatefulWidget {
   WelcomePage({Key key, this.title}) : super(key: key);
 
@@ -14,6 +18,7 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
+  //TODO: Giriş yap sayfasına yönlendirme yapılan kısım
   Widget _submitButton() {
     return InkWell(
       onTap: () {
@@ -43,6 +48,7 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 
   Widget _signUpButton() {
+    //TODO: Kayıt ol sayfasına yönlendirme yapılan kısım
     return InkWell(
       onTap: () {
         Navigator.push(
@@ -65,6 +71,7 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 
   Widget _label() {
+    //TODO: Touch id widget ayarları bölümü
     return Container(
         margin: EdgeInsets.only(top: 40, bottom: 20),
         child: Column(
@@ -93,21 +100,22 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 
   Widget _title() {
+    //TODO: Uygulama başlığının düzenlendiği kısım
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-          text: 's',
+          text: 'B',
           style: GoogleFonts.portLligatSans(
               textStyle: Theme.of(context).textTheme.display1,
               fontSize: 30,
               fontWeight: FontWeight.w700),
           children: [
             TextSpan(
-              text: 'er',
+              text: 'LOG',
               style: TextStyle(color: Colors.black, fontSize: 30),
             ),
             TextSpan(
-              text: 'hat',
+              text: 'CU',
               style: TextStyle(color: Colors.white, fontSize: 30),
             ),
           ]),
@@ -115,6 +123,7 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 
   Widget _continue() {
+    //TODO: Uygulama da giriş yapmadan devam etmek için anasayfaya yönlendirmenin ayarlandığı kısım
     return InkWell(
       onTap: () {
         Navigator.push(

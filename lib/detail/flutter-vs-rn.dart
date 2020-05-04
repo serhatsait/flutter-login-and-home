@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+//TODO: bazı sayfalarda da kullanılan aynı kodların açıklamalarını her sayfaya eklemedim hocam. Bilginiz olsun :)
+//TODO: Flutter vs React Native makalesi sayfasının kodları burada bulunuyor
 class Detail1 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => Detail1State();
@@ -11,6 +13,9 @@ class Detail1State extends State<Detail1> {
   @override
   Widget build(BuildContext context) {
 
+    //TODO: styleGoogle adında bir değişkene yazı stilleri atanarak bir çok yerde kullanılan stilleri buradan kontrol edip
+    //TODO: tek bir yerden değiştirip hepsinde değişmesini sağlıyoruz
+    //TODO: böylelikle kod kısalığını da sağlamış oluyoruz
     final styleGoogle = GoogleFonts.nunito(
       textStyle: TextStyle(
           fontSize: 14,
@@ -23,6 +28,7 @@ class Detail1State extends State<Detail1> {
 
     return Scaffold(
       appBar: new AppBar(
+        //TODO: Burada appbar oluşturarak ilgili sayfanın başlığını ekliyoruz
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -47,6 +53,7 @@ class Detail1State extends State<Detail1> {
         ),
       ),
       body: SingleChildScrollView(
+        //TODO: Burada sayfanın içeriğini eklemeye başlıyoruz
         child: Builder(
           builder: (context) => GestureDetector(
             child: Stack(
@@ -58,9 +65,11 @@ class Detail1State extends State<Detail1> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       SizedBox(
+                        //TODO: 30px lik bir boşluk bırakıyoruz
                         height: 30,
                       ),
                       Container(
+                        //TODO: Elementin içerisinde resim ekleme, yükseklik ve genişliğini ayarlama bölümü
                           width: 190.0,
                           height: 190.0,
                           decoration: new BoxDecoration(
@@ -73,6 +82,7 @@ class Detail1State extends State<Detail1> {
                         height: 10,
                       ),
                       Center(
+                        //TODO: Elementin içerinde yazı ekleme bölümü
                         child: Text(
                           'React Native by Facebook and Flutter by Google – two hot cross-platform app development technologies'
                           ' creating a buzz. In this post, we will compare both of them in detail from a developer’s perspective. '

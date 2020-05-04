@@ -3,6 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:serhatsaitpekediz/login/Widget/bezierContainer.dart';
 import 'package:serhatsaitpekediz/login/loginPage.dart';
 
+//TODO: bazı sayfalarda da kullanılan aynı kodların açıklamalarını her sayfaya eklemedim hocam. Bilginiz olsun :)
+//TODO: Kayıt ol sayfasının kodları burada bulunuyor
+
 class SignUpPage extends StatefulWidget {
   SignUpPage({Key key, this.title}) : super(key: key);
 
@@ -13,6 +16,7 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  //TODO: Geri butonunun ayarlandığı kısım
   Widget _backButton() {
     return InkWell(
       onTap: () {
@@ -35,6 +39,7 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   Widget _entryField(String title, {bool isPassword = false}) {
+    //TODO: Kullanıcı Adı ve Eposta ve Şifre yazılarının özelliklerinin ayarlandığı kısım
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
       child: Column(
@@ -59,6 +64,7 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   Widget _submitButton() {
+    //TODO: Kayıt ol butonunun özelliklerinin ayarlandığı kısım
     return Container(
       width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.symmetric(vertical: 15),
@@ -84,6 +90,7 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   Widget _loginAccountLabel() {
+    //TODO: Bir hesabın var mı alanının ayarlandığı kısım
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20),
       alignment: Alignment.bottomCenter,
@@ -116,10 +123,11 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   Widget _title() {
+    //TODO: Uygulama başlığının düzenlendiği kısım
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-          text: 's',
+          text: 'B',
           style: GoogleFonts.portLligatSans(
             textStyle: Theme.of(context).textTheme.display1,
             fontSize: 30,
@@ -127,11 +135,11 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
           children: [
             TextSpan(
-              text: 'er',
+              text: 'LOG',
               style: TextStyle(color: Colors.black, fontSize: 30),
             ),
             TextSpan(
-              text: 'hat',
+              text: 'CU',
               style: TextStyle(color: Color(0xff2d9a59), fontSize: 30),
             ),
           ]),
@@ -139,6 +147,7 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   Widget _emailPasswordWidget() {
+    //TODO: İlgili fieldların başlıklarını düzenleme kısmı
     return Column(
       children: <Widget>[
         _entryField("Kullanıcı Adı"),
